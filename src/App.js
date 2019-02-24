@@ -1,25 +1,40 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import Review from './Components/Review';
+import Header from './Components/Header';
+
+
 import './App.css';
 
-class App extends Component {
+export class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      cards: []
+    }
+
+    }
+
+    // componentDidMount() {
+    // fetch('http://whateverly-datasets.herokuapp.com/api/v1/gems')
+    //   .then(response => response.json())
+    //   .then(cards => {
+    //     this.setState({
+    //       cards: cards.cards
+    //     })
+    //   })
+    //   .catch(err => {
+    //     throw new Error(err);
+    //   })
+    // }
+  
+
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <Header />
+      <Review />
       </div>
     );
   }
