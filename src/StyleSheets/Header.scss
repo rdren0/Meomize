@@ -1,20 +1,39 @@
-.filter-buttons {
+.filter-buttons:hover{
+  background-color: #E1CE7A;
+  color: black;
+  font-weight: 700;
+  border: 2px solid gainsboro;
+  cursor: pointer;
+}
+
+.header-container{
+  padding-top: 20px;
+  margin-bottom: 0px;
+  background-color: #1B3B6F;
+  border-bottom: 1px solid gainsboro;
+}
+
+button{
+  background-color: #21295C;
+  color: #FFF;
   border: 2px solid gainsboro;
   border-radius: 15px;
   width: 100px;
   height: 40px;
   margin-bottom: 10px;
   margin-right: 10px;
+  outline: none;
 }
 
-.filter-buttons:hover{
-  background-color: gray;
-  color: #FFF;
-  border: 2px solid lightblue;
+
+.categories-text{
+  color: #21295C;
+  margin-top: 0px;
+  padding-top: 5px;
 }
 
-.header-container{
-  padding: 20px;
-  background-color: #003459;
-  border-bottom: 1px solid gainsboro;
+h1{
+  color: #E1CE7A;
+  font-size: 50px;
+  margin-top: -5px;
 }
