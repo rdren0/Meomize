@@ -1,11 +1,29 @@
 
 .card-box{
 border-radius: 15px;
-width: 250px;
-height: 150px;
+width: 300px;
+height: 180px;
 border: 1px solid gainsboro;
-background-color: #384154;
+background-color: #79C7C5;
 margin: 10px;
-padding: 10px;
+padding: 15px;
 
+}
+
+.card-box:hover{
+  background-color: #69ADAB;
+  -webkit-box-shadow: 0px 10px 21px -5px rgba(153,144,153,0.63);
+  -moz-box-shadow: 0px 10px 21px -5px rgba(153,144,153,0.63);
+  box-shadow: 0px 10px 21px -5px rgba(153,144,153,0.63);
+}
+
+.card-box button:hover{
+  background-color: #E1CE7A;
+  color: black;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.hidden-answer{
+  display: none;
 }
