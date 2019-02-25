@@ -11,7 +11,6 @@ class Card extends Component {
 
   answerVisible = () => {
     let show = this.state.showAnswer;
-    console.log(show);
     this.setState({showAnswer:!show})
   }
 
