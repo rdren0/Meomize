@@ -1,14 +1,15 @@
 import React from 'react';
-import Flippy, { FrontSide, BackSide } from 'react-flippy';
 
 
 function Card(props) {
     return(
         <div className="card-box">
-          <h3>
+        <button className"remove-card"> X </button>
+          <h3 className="card-title">
             {props.cardTitle}
           </h3>
-          <button>Show Answer</button>
+          <button className="show-answer">Show Answer</button>
+        
         <div className="hidden-answer">
           <h2>
             {props.cardAnswer}
