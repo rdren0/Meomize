@@ -1,24 +1,40 @@
-import React from 'react';
+import React, { Component } from 'react';
+
+class Card extends Component {
+  constructor(){
+    super();
+    this.state = {
+      showAnswer: false
+    }
+  }
 
 
-function Card(props) {
-    return(
-        <div className="card-box">
-        <button className"remove-card"> X </button>
+  answerVisible(){
+    this.setState({showAnswer:!showAnswer})
+
+  }
+
+render() {
+    return (
+      <div>
+       <div className="card-box">
           <h3 className="card-title">
-            {props.cardTitle}
+            {this.props.cardTitle}
           </h3>
-          <button className="show-answer">Show Answer</button>
-        
+          <button onClick= {this.answerVisible} className="show-answer">Show Answer</button>
+        </div>
+        {this.state.showAnswer &&
         <div className="hidden-answer">
-          <h2>
-            {props.cardAnswer}
-          </h2>
-        </div>
-          
-          
-        </div>
-    )
+            <h2>
+            {this.props.cardAnswer}
+            </h2>
+            <button onClick= {this.answerVisible}>Try Again</button>
+            <button className="remove-card">Delete Card</button>
+        </div>}
+      </div>
+    );
+  }
 }
+
 
 export default Card;

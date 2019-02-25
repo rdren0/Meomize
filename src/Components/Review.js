@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Card from './Card';
-import {cards} from './data';
+// import {cards} from './data';
 
 
 class Review extends Component {
@@ -13,7 +13,7 @@ class Review extends Component {
 
   selectCategory = (e) => {
     let clickedButton = e.target.value;
-    let filterCards = cards.filter(card => {
+    let filterCards = this.props.cards.filter(card => {
       return card.type.includes(clickedButton);
     })
     this.setState({
@@ -22,7 +22,7 @@ class Review extends Component {
   }
 
   showAll = (e) => {
-    let filterCards = cards.map(card => {
+    let filterCards = this.props.cards.map(card => {
       return card;
     })
     this.setState({
