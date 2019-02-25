@@ -14,18 +14,19 @@ export class App extends Component {
 
     }
 
-    // componentDidMount() {
-    // fetch('http://whateverly-datasets.herokuapp.com/api/v1/gems')
-    //   .then(response => response.json())
-    //   .then(cards => {
-    //     this.setState({
-    //       cards: cards.cards
-    //     })
-    //   })
-    //   .catch(err => {
-    //     throw new Error(err);
-    //   })
-    // }
+    componentDidMount() {
+    fetch('http://memoize-datasets.herokuapp.com/api/v1/rdCards')
+      .then(response => response.json())
+      .then(cards => {
+          console.log(cards);
+        this.setState({
+          cards: cards.rdCards
+        })
+      })
+      .catch(err => {
+        throw new Error(err);
+      })
+    }
   
 
 
@@ -33,7 +34,7 @@ export class App extends Component {
     return (
       <div className="App">
       <Header />
-      <Review />
+      <Review cards={this.state.cards} />
       </div>
     );
   }
