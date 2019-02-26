@@ -14,26 +14,22 @@ export class App extends Component {
       cards: [],
       loadingScreen: true
     }
+  }
 
-    }
-
-    componentDidMount() {
-      console.log('hello');
-    fetch('http://memoize-datasets.herokuapp.com/api/v1/rdCards')
-      .then(response => response.json())
-      .then(cards => {
-          console.log(cards);
-        this.setState({
-          cards: cards.rdCards,
-          loadingScreen: false
-        })
+  componentDidMount() {
+  fetch('http://memoize-datasets.herokuapp.com/api/v1/rdCards')
+    .then(response => response.json())
+    .then(cards => {
+      this.setState({
+        cards: cards.rdCards,
+        loadingScreen: false
       })
-      .catch(err => {
-        throw new Error(err);
-      })
-    }
+    })
+    .catch(err => {
+      throw new Error(err);
+    })
+  }
   
-
 
   render() {
     if(this.state.loadingScreen){

@@ -30,10 +30,15 @@ class Review extends Component {
     })
   }
 
+  changeComplete = (e) =>{
+
+  }
+
 
 
   render() {
       const flashCards = this.state.filterCards.map(card => {
+            localStorage.setItem(card.id, JSON.stringify(card.complete));
       return <Card 
                 key={card.id} 
                 cardType={card.type} 
