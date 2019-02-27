@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match the snapshot with all data passed in 1`] = `
+<div
+  className="card-box"
+>
+  <h3
+    className="card-title"
+  >
+    What goes in the parameters of a Reduce?
+  </h3>
+  <button
+    className="show-answer"
+    onClick={[Function]}
+  >
+    Show Answer
+  </button>
+</div>
+`;

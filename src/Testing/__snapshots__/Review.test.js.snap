@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Review should match the snapshot with all data passed in correctly 1`] = `
+<div
+  className="card-display"
+>
+  <h4
+    className="categories-text"
+  >
+     Sort by Category: 
+  </h4>
+  <button
+    className="filter-buttons"
+    onClick={[Function]}
+    value="return"
+  >
+    RETURNS
+  </button>
+  <button
+    className="filter-buttons"
+    id="syntax-button"
+    onClick={[Function]}
+    value="syntax"
+  >
+    SYNTAX
+  </button>
+  <button
+    className="filter-buttons"
+    onClick={[Function]}
+    value="useCase"
+  >
+    USE CASE
+  </button>
+  <button
+    className="filter-buttons"
+    onClick={[Function]}
+  >
+    ALL
+  </button>
+  <div
+    className="card-container"
+  />
+</div>
+`;
