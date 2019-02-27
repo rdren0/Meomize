@@ -14,6 +14,14 @@ class Card extends Component {
     this.setState({showAnswer:!show})
   }
 
+  completeCard = (e) =>{
+    // this.props.mastered++;
+    console.log(e.target)
+    // let cardID = e.target.card.id
+    // localStorage.setItem(cardID, true);
+
+  }
+
 render() {
 
   if(this.state.showAnswer){
@@ -23,7 +31,7 @@ render() {
             {this.props.cardAnswer}
             </h2>
             <button onClick= {this.answerVisible}>Try Again</button>
-            <button className="remove-card">Delete Card</button>
+            <button onClick ={this.completeCard} className="remove-card">Mastered</button>
       </div>
         )
   }else {

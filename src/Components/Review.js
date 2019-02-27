@@ -7,7 +7,9 @@ class Review extends Component {
   constructor() {
     super();
     this.state = {
-      filterCards:[]
+      filterCards:[],
+      complete:false,
+      mastered: 0
       };
   }
 
@@ -30,9 +32,6 @@ class Review extends Component {
     })
   }
 
-  changeComplete = (e) =>{
-
-  }
 
 
 
@@ -51,7 +50,7 @@ class Review extends Component {
       <div className="card-display">
       <h4 className="categories-text"> Sort by Category: </h4>
         <button value="return" className="filter-buttons" onClick={this.selectCategory}>RETURNS</button> 
-        <button value="syntax" className="filter-buttons" onClick={this.selectCategory}>SYNTAX</button> 
+        <button id ="syntax-button" value="syntax" className="filter-buttons" onClick={this.selectCategory}>SYNTAX</button> 
         <button value="useCase" className="filter-buttons" onClick={this.selectCategory}>USE CASE</button>
         <button className="filter-buttons" onClick={this.showAll}>ALL</button>
         <div className='card-container'>
